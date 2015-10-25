@@ -35,6 +35,10 @@ APACHE_CONF_OPTS = \
 	--disable-lua \
 	--disable-luajit
 
+ifeq ($(BR2_PACKAGE_APACHE_ALLOW_ROOT),y)
+APACHE_CONF_OPTS += CFLAGS="$(TARGET_CFLAGS) -DBIG_SECURITY_HOLE"
+endif
+
 ifeq ($(BR2_ARCH_HAS_ATOMICS),y)
 APACHE_CONF_OPTS += --enable-nonportable-atomics=yes
 endif
