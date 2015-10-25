@@ -1,0 +1,8 @@
+config BR2_PACKAGE_PHP_APCU
+	bool "php-apcu"
+	depends on BR2_PACKAGE_PHP
+	select BR2_PACKAGE_APC
+	help
+	  PHP APCU provide PHP OpCode cache
+
+	  http://pecl.php.net/package/acpu
