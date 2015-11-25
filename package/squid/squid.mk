@@ -58,7 +58,7 @@ SQUID_CONF_ENV += ac_cv_search_shm_open="-lrt -lpthread"
 endif
 
 ifeq ($(BR2_PACKAGE_OPENSSL),y)
-SQUID_CONF_OPTS += --with-openssl
+SQUID_CONF_OPTS += --with-openssl --enable-ssl-crtd
 SQUID_DEPENDENCIES += openssl
 else
 SQUID_CONF_OPTS += --without-openssl
