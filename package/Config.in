@@ -128,6 +128,7 @@ if BR2_PACKAGE_BUSYBOX_SHOW_OTHERS
 endif
 	source "package/gettext/Config.in"
 	source "package/git/Config.in"
+	source "package/gogs/Config.in"
 	source "package/gperf/Config.in"
 if BR2_PACKAGE_BUSYBOX_SHOW_OTHERS
 	source "package/grep/Config.in"
@@ -460,6 +461,7 @@ menu "Erlang libraries/modules"
 	source "package/erlang-p1-zlib/Config.in"
 endmenu
 endif
+	source "package/golang/Config.in"
 	source "package/guile/Config.in"
 	source "package/haserl/Config.in"
 	source "package/jamvm/Config.in"
@@ -575,9 +577,11 @@ endif
 if BR2_PACKAGE_PHP
 if !BR2_STATIC_LIBS
 menu "External php extensions"
+	source "package/php-apcu/Config.in"
 	source "package/php-geoip/Config.in"
 	source "package/php-gnupg/Config.in"
 	source "package/php-imagick/Config.in"
+	source "package/php-memcache/Config.in"
 	source "package/php-memcached/Config.in"
 	source "package/php-ssh2/Config.in"
 	source "package/php-yaml/Config.in"

@@ -17,3 +17,8 @@ config BR2_PACKAGE_APACHE
 comment "apache needs a toolchain w/ dynamic library, threads"
 	depends on BR2_USE_MMU
 	depends on BR2_STATIC_LIBS || !BR2_TOOLCHAIN_HAS_THREADS
+
+if BR2_PACKAGE_APACHE
+config BR2_PACKAGE_APACHE_ALLOW_ROOT
+	bool "Allow apache running as root"
+endif
