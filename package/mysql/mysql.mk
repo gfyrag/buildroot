@@ -62,9 +62,8 @@ MYSQL_CONF_OPTS += \
 	--without-plugin-example \
 	--without-plugin-federated \
 	--without-plugin-ibmdb2i \
-	--without-plugin-innobase \
-	--without-plugin-innodb_plugin \
-	--without-plugin-ndbcluster
+	--without-plugin-ndbcluster \
+	--with-innodb
 
 # Debugging is only available for the server, so no need for
 # this if-block outside of the server if-block
