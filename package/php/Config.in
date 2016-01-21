@@ -64,6 +64,15 @@ config BR2_PACKAGE_PHP_SAPI_CLI_FPM
 	help
 	  Command line and PHP-FPM (FastCGI Process Manager)
 
+config BR2_PACKAGE_PHP_SAPI_ALL
+        bool "FPM and CLI and CGI"
+	depends on BR2_USE_MMU
+	select BR2_PACKAGE_PHP_CLI
+        select BR2_PACKAGE_PHP_FPM
+	select BR2_PACKAGE_PHP_CGI
+        help
+          Command line and Common gateway interfaces and PHP-FPM (FastCGI Process Manager)
+
 endchoice
 
 endif
